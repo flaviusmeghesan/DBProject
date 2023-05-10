@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="formbox">
+        <div class="buttonbox">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log in
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div id="login2" class="welcome" onclick="login()">Welcome back!</div>
+        <div id="register2" class="welcome" onclick="register()">Welcome!</div>
+        <form action="connect.php" method="post" id="login" class="input-group">
+          <input
+            type="text"
+            class="inputfield"
+            placeholder="username"
+            required
+            name="username"
+          />
+          <input
+            type="text"
+            class="inputfield"
+            placeholder="password"
+            required
+            name="password"
+          />
+          <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <form id="register" class="input-group">
+          <input
+            type="text"
+            class="inputfield"
+            placeholder="username"
+            required
+          />
+          <input
+            type="text"
+            class="inputfield"
+            placeholder="password"
+            required
+          />
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+      var xf = document.getElementById("login2");
+      var yf = document.getElementById("register2");
+
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+        yf.style.left = "450px";
+        xf.style.left = "70px";
+      }
+      function register() {
+        x.style.left = "-400px";
+        xf.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "100px";
+        yf.style.left = "50px";
+      }
+    </script>
+  </body>
+</html>
