@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events Management System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events Management System</h1>
+
+    <h2>Event List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Here, you would populate the table with event data from the backend -->
+        <tr>
+          <td>1</td>
+          <td>Event 1</td>
+          <td>2023-05-15</td>
+          <td>Location 1</td>
+          <td>
+            <a href="edit_event.php?id=1" class="button">Edit</a>
+            <a href="delete_event.php?id=1" class="button">Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Event 2</td>
+          <td>2023-06-10</td>
+          <td>Location 2</td>
+          <td>
+            <a href="edit_event.php?id=2" class="button">Edit</a>
+            <a href="delete_event.php?id=2" class="button">Delete</a>
+          </td>
+        </tr>
+        <!-- Repeat the above row structure for each event in the list -->
+      </tbody>
+    </table>
+
+    <h2>Add New Event</h2>
+    <form action="create_event.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required /><br />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required /><br />
+
+      <input type="submit" value="Create Event" class="button" />
+    </form>
+
+    <h2>Search Events</h2>
+    <form action="search_events.php" method="GET">
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search" required />
+      <input type="submit" value="Search" class="button" />
+    </form>
+  </body>
+</html>

@@ -6,6 +6,7 @@
 
 }
 .main{
+    
     color: white;
     height: 100%;
     width: 100%;
@@ -15,6 +16,7 @@
     position: absolute;
 }
 .formbox{
+
     width: 380px;
     height: 380px;
     position: relative;
@@ -24,6 +26,7 @@
     overflow: hidden;
     backdrop-filter: blur(6px);
     border-radius: 50px;
+    box-shadow: .5em .5em 20em black;
     
 }
 .welcome{
@@ -32,6 +35,8 @@
     font-size: 80px;
     margin:10px auto;
     text-align: center;
+    animation: fadeinanim;
+    animation-duration: 3s;    
 }
 .buttonbox{
     
@@ -93,6 +98,9 @@
     outline: none;
     border-radius: 30px;
 }
+.submit-btn:hover{
+    background: linear-gradient(to right, #706a2b, #7e0f8d);
+}
 #login{
     left: 50px;
 }
@@ -116,4 +124,80 @@
 ::placeholder{
     opacity: 50%;
     color: black;
+}
+
+@keyframes fadeinanim{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+  /* REGISTRATION TAB */
+  .reg-container{
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-color: #bababa;
+    color:black;
+    width: 100%;
+    height: 100%;
+  
+  }
+  .reg-box{
+    border: none;
+    top: 10em;
+    margin: 0px auto;
+    position: relative;
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    
+  }
+  #reg-icon{
+    position: absolute;
+    color:#4CAF50;
+    outline: none;    
+    display: block;
+    margin-left: 1.5em;
+    margin-top: 1.2em;
+  }
+
+  .reg-text{
+    position: absolute;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color: black;
+    width: 100%;
+  
+    display: inline;
+    margin: auto;
+    margin-top: 10em;
+    transform: translate(10%);
+  }
+
+  .reg-minibox{
+    position: absolute;
+    margin-top: 250px;
+    background-color: #4CAF50;
+    width: 300px;
+    height: 100px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
+  .bttn{
+    outline: none;
+    color: black;
+    border: 1px solid;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    outline: none;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 2em;
+    
 }

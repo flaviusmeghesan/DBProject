@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and Registration</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
     <div class="main">
@@ -21,7 +21,7 @@
         </div>
         <div id="login2" class="welcome" onclick="login()">Welcome back!</div>
         <div id="register2" class="welcome" onclick="register()">Welcome!</div>
-        <form action="connect.php" method="post" id="login" class="input-group">
+        <form action="login.php" method="post" id="login" class="input-group">
           <input
             type="text"
             class="inputfield"
@@ -30,7 +30,7 @@
             name="username"
           />
           <input
-            type="text"
+            type="password"
             class="inputfield"
             placeholder="password"
             required
@@ -38,18 +38,25 @@
           />
           <button type="submit" class="submit-btn">Log in</button>
         </form>
-        <form id="register" class="input-group">
+        <form
+          action="register.php"
+          method="post"
+          id="register"
+          class="input-group"
+        >
           <input
             type="text"
             class="inputfield"
             placeholder="username"
             required
+            name="username"
           />
           <input
-            type="text"
+            type="password"
             class="inputfield"
             placeholder="password"
             required
+            name="password"
           />
           <button type="submit" class="submit-btn">Register</button>
         </form>
