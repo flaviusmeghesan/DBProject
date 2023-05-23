@@ -11,5 +11,4 @@ Functionalities
 - delete event
 - view event
 - update event
-#TO DO
-password encryption
+
