@@ -20,7 +20,7 @@ if ($result) {
       $q = "INSERT INTO credentials(username, pass)
 VALUES('$username','$password')";
 if ($conn->query($q) === TRUE) {
-    header('location: regsus.html');
+    header('location: display.php');
   } else {
     echo "Error: " . $q . "<br>" . $conn->error;
   }

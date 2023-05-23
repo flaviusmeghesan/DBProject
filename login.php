@@ -9,7 +9,7 @@ $result = mysqli_query($conn,$q);
 $count=mysqli_num_rows($result);
 if($count>0)
 {
-  header('location: homepage.html');
+  header('location: display.php');
 }
 else{
   echo "Login NOT successful";
